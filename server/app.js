@@ -15,6 +15,9 @@ app.use(cors());
 
 // Routes
 app.use("/api/auth", require("./routes/auth"));
+// Add these lines to server.js
+app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/admin", require("./routes/adminRoutes"));
 
 const PORT = process.env.PORT || 5000;
 
