@@ -28,7 +28,7 @@ export default function AdminDashboard() {
     try {
       const config = { headers: { Authorization: `Bearer ${token}` } };
       const response = await axios.get(
-        `http://localhost:5000/api/admin/users?page=${page}&limit=${itemsPerPage}`,
+        `https://captn.onrender.com/api/admin/users?page=${page}&limit=${itemsPerPage}`,
         config
       );
       setUsers(response.data.data || response.data);
@@ -55,7 +55,7 @@ export default function AdminDashboard() {
     try {
       const config = { headers: { Authorization: `Bearer ${token}` } };
       await axios.put(
-        `http://localhost:5000/api/admin/users/${editingUserId}`,
+        `https://captn.onrender.com/api/admin/users/${editingUserId}`,
         formData,
         config
       );
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
     try {
       const config = { headers: { Authorization: `Bearer ${token}` } };
       await axios.delete(
-        `http://localhost:5000/api/admin/users/${userId}`,
+        `https://captn.onrender.com/api/admin/users/${userId}`,
         config
       );
       showMessage("success", "User deleted successfully!");

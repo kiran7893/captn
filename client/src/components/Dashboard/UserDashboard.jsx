@@ -29,7 +29,7 @@ export default function UserDashboard() {
       };
 
       const response = await axios.put(
-        "http://localhost:5000/api/users/profile",
+        "https://captn.onrender.com/api/users/profile",
         formData,
         config
       );
